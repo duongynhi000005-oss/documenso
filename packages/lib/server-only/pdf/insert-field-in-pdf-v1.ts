@@ -343,7 +343,7 @@ export const insertFieldInPDFV1 = async (pdf: PDFDocument, field: FieldWithSigna
           width: 8,
         });
 
-        if (selected.includes(item.value)) {
+        if (field.customText === item.value || selected.includes(item.value)) {
           radio.select(item.value);
         }
       }
